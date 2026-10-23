@@ -5,8 +5,11 @@
   --navy-900: #062631;
   --navy-850: #0a303b;
   --navy-800: #103b47;
-  --orange: #f26b38;
-  --orange-dark: #dd5727;
+  --yellow: #ffcd11;
+  --yellow-dark: #e0b400;
+  --yellow-ink: #856400;
+  --orange: var(--yellow);
+  --orange-dark: var(--yellow-dark);
   --ivory: #f4f0e7;
   --ivory-2: #ebe5da;
   --white: #fffdf8;
@@ -45,6 +48,15 @@ h3 { font-size: clamp(1.5rem, 2vw, 2.05rem); }
 .lead { color: var(--muted); font-size: 1.07rem; line-height: 1.8; }
 .section--dark .lead { color: #b7c7c8; }
 .orange { color: var(--orange); }
+.section--ivory .kicker,
+.section--white .kicker,
+.stat-band .metric__icon,
+.section--ivory .principle__icon,
+.section--white .principle__icon,
+.section--ivory .service-chapter__number,
+.section--ivory .deliverables b,
+.section--ivory .evidence-item__icon,
+.contact-step__number { color: var(--yellow-ink); }
 
 .site-header { position: sticky; top: 0; z-index: 50; height: 76px; color: #fff; background: rgba(4, 27, 36, .98); border-bottom: 1px solid rgba(255, 255, 255, .12); backdrop-filter: blur(14px); }
 .site-header__inner { height: 100%; display: flex; align-items: center; gap: 42px; }
@@ -61,12 +73,12 @@ h3 { font-size: clamp(1.5rem, 2vw, 2.05rem); }
 .menu-open .menu-toggle::before { transform: translateY(6px) rotate(45deg); }
 .menu-open .menu-toggle::after { transform: translateY(-6px) rotate(-45deg); }
 
-.btn { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 18px; padding: 0 24px; border: 1px solid var(--orange); background: var(--orange); color: #fff; font-size: .76rem; font-weight: 700; letter-spacing: .02em; cursor: pointer; transition: transform .2s, background .2s, border-color .2s; }
+.btn { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 18px; padding: 0 24px; border: 1px solid var(--orange); background: var(--orange); color: var(--navy-950); font-size: .76rem; font-weight: 700; letter-spacing: .02em; cursor: pointer; transition: transform .2s, background .2s, border-color .2s; }
 .btn::after { content: '→'; font-size: 1.1rem; }
 .btn:hover { transform: translateY(-2px); background: var(--orange-dark); border-color: var(--orange-dark); }
-.btn--outline { background: transparent; border-color: rgba(255, 255, 255, .6); }
+.btn--outline { background: transparent; border-color: rgba(255, 255, 255, .6); color: #fff; }
 .btn--outline:hover { background: #fff; color: var(--navy-950); border-color: #fff; }
-.btn--dark { background: var(--navy-950); border-color: var(--navy-950); }
+.btn--dark { background: var(--navy-950); border-color: var(--navy-950); color: #fff; }
 .btn--dark:hover { background: #0b3440; border-color: #0b3440; }
 
 .hero { min-height: 690px; position: relative; display: grid; align-items: stretch; color: #fff; background: var(--navy-950); overflow: hidden; }
@@ -186,7 +198,7 @@ h3 { font-size: clamp(1.5rem, 2vw, 2.05rem); }
 .field label { font-size: .68rem; font-weight: 600; }
 .field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid #536d75; border-radius: 0; outline: none; background: #0a303b; color: #fff; }
 .field textarea { min-height: 120px; resize: vertical; }
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 2px rgba(242,107,56,.2); }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 2px rgba(255,205,17,.24); }
 .field input::placeholder, .field textarea::placeholder { color: #8ea2a4; }
 .contact-form .btn { width: 100%; margin-top: 20px; }
 .form-note { margin-top: 14px; color: #9db0b2; font-size: .68rem; line-height: 1.5; }
@@ -198,7 +210,8 @@ h3 { font-size: clamp(1.5rem, 2vw, 2.05rem); }
 .contact-step h3 { margin-top: 8px; font-size: 1.55rem; }
 .contact-step p { margin-top: 10px; color: var(--muted); font-size: .8rem; }
 
-.big-cta { padding: 56px 0; background: var(--orange); color: #fff; position: relative; overflow: hidden; }
+.big-cta { padding: 56px 0; background: var(--orange); color: var(--navy-950); position: relative; overflow: hidden; }
+.big-cta .kicker { color: var(--navy-950); }
 .big-cta__inner { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
 .big-cta h2 { max-width: 820px; font-size: clamp(2rem, 3.2vw, 3.5rem); }
 .site-footer { padding: 60px 0 24px; background: var(--navy-950); color: #fff; }
